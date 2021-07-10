@@ -1,0 +1,33 @@
+#include <iostream>
+#include <windows.h>
+#include <stdlib.h>
+using namespace std;
+
+void timer()
+{
+	int d = 0, h = 0, m = 0, s = 0;
+	while (true) {
+
+		if (s == 60) {
+			s = 0;
+			m++;
+		}
+		if (m == 60) {
+			m = 0;
+			h++;
+		}
+		if (h == 60) {
+			h = 0;
+			d++;
+		}
+		system("cls");
+		cout << d << " Days : " << h << " Hours : " << m << " Minutes : " << ++s <<" Seconds";
+		Sleep(1000);
+	}
+}
+
+int main()
+{
+	timer();
+
+}
